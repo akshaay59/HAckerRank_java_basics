@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int amount = sc.nextInt(); // Reads the integer (e.g., 1200)
+        sc.nextLine(); // Consume the rest of the line, including the newline character
+                     // This prepares the scanner to read the actual 'note' string on the next line
+
+        String noteStatus = sc.nextLine(); // Now reads "not available" as a full string
+                                         // Or "available" as a full string
+
+        if (noteStatus.equals("available")) {
+            if (amount % 100 == 0) {
+                System.out.println("Amount " + amount + " can be withdrawn");
+            } else {
+                System.out.println("Enter amount in multiples of 500");
+            }
+        } else if (noteStatus.equals("not available")) {
+            if (amount % 500 == 0) {
+                System.out.println("Amount " + amount + " can be withdrawn");
+            } else {
+                System.out.println("Enter amount in multiples of 500");
+            }
+        }
+        // No else block needed here as constraints guarantee 'noteStatus' will be one of these two values.
+        
+        sc.close();
+    }
+}

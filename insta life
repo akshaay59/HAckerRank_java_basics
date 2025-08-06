@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+        String name;
+        int follower;
+        int post;
+        float hour;
+        name = sc.next();
+        follower = sc.nextInt();
+        post = sc.nextInt();
+        hour = sc.nextFloat();
+        if(name.length() < 1 || name.length() > 100){
+            System.out.println("Invalid input");
+        }
+        if(follower < 0 || follower > 10000000){
+            System.out.println("Invalid input");
+        }
+        if(post < 0 || post > 1000000){
+            System.out.println("Invalid input");
+        }
+        if(hour < 0.0 || hour > 24.0){
+            System.out.println("Invalid input");
+        }
+        System.out.println("My name is " + name + ", my Instagram has " + follower + " followers, I have posted " + post + " posts, and I use Instagram for " + hour + " hours daily.");
+        sc.close();
+    }
+}

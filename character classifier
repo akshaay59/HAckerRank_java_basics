@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+        char x;
+        x = sc.next().charAt(0);
+        if(x >= 'a' && x <= 'z'){
+            System.out.println("Lowercase Alphabet");
+        }
+        else if(x >= 'A' && x <= 'Z'){
+           System.out.println("Uppercase Alphabet"); 
+        }
+        else if(x >= '0' && x <= '9'){
+           System.out.println("Digit"); 
+        }
+        else{
+          System.out.println("Special Character");   
+        }
+        sc.close();
+    }
+}

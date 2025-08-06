@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+        int a;
+        int b;
+        a = scanner.nextInt();
+        b = scanner.nextInt();
+        int sum = a + b;
+        int diff = a - b;
+        int prod = a * b;
+        int quo = a / b;
+        int rem = a % b;
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + diff);
+        System.out.println("Product: " + prod);
+        System.out.println("Quotient: " + quo);
+        System.out.println("Remainder: " + rem);
+        scanner.close();
+    }
+}
